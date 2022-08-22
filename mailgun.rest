@@ -1,0 +1,42 @@
+### Mailgun - Plain text
+POST http://localhost:3000/text
+Content-Type: application/json
+
+{
+    "to": "adriangbarnett@gmail.com",
+    "cc": "",
+    "bcc": "",
+    "from": "MailGunDemo@nowhere.com",
+    "subject": "plainTextSubject1",
+    "text": "plainText1",
+    "files": 
+    [
+        {"filepath": "./demoFiles/apple.png", "filename": "apple.png"}, 
+        {"filepath": "./demoFiles/strawberry.png", "filename": "strawberry.png"},
+        {"filepath": "./demoFiles/cherries.png", "filename": "cherries.png"}
+    ]
+    
+}
+
+
+### Mailgun - HTML:
+POST http://localhost:3000/html
+Content-Type: application/json
+
+{
+    "to": "adriangbarnett@gmail.com",
+    "cc": "",
+    "bcc": "",
+    "from": "MailGunDemo@nowhere.com",
+    "subject": "htmlTextSubject1",
+    "text": "plianText1",
+    "html": "<html><head>head</head><body>body<h1>HEADING1</h1></body></html>",
+    "files": 
+    [
+        {"filepath": "./demoFiles/apple.png", "filename": "apple.png"}, 
+        {"filepath": "./demoFiles/strawberry.png", "filename": "strawberry.png"},
+        {"filepath": "./demoFiles/cherries.png", "filename": "cherries.png"}
+    ]
+}
+
+
